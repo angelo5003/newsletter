@@ -1,0 +1,27 @@
+@media screen and (max-width: 375px) {
+  .form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .form-title {
+    color: hsl(234, 29%, 20%);
+  }
+
+  .form-btn {
+    padding: 1rem;
+    border-radius: 0.43rem;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+  }
+
+  .form-btn:hover {
+    background-color: hsl(4, 100%, 67%);
+    transition: 0.4s;
+  }
+}

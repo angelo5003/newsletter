@@ -1,0 +1,39 @@
+@media screen and (max-width: 375px) {
+  .register-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.9rem;
+  }
+
+  .register-text {
+    color: hsl(235, 18%, 26%);
+  }
+
+  .register-list-items-outer-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .register-list-items-container {
+    list-style-type: none;
+    list-style-image: url("/assets/images/icon-list.svg");
+    padding: 0;
+    width: 18.75rem;
+  }
+
+  .register-list-items {
+    margin-bottom: 0.9rem;
+    color: hsl(235, 18%, 26%);
+    padding-left: 0.6rem;
+  }
+
+  .register-email-input {
+    padding: 1rem;
+    border-radius: 0.43rem;
+    border-color: hsl(231, 7%, 60%);
+    margin-bottom: 1.25rem;
+  }
+}
