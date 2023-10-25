@@ -5,6 +5,12 @@ import { useState } from "react";
 const Form = () => {
   const [formInput, setFormInput] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [error, setError] = useState(null); // Initializing state for error messages.
+
+  // Function to check if the input value is a valid email.
+  const checkValidEmail = (formInput) => {
+    return /\S+@\S+\.\S+/.test(formInput);
+  };
 
   const handleChange = (e) => {
     setFormInput(e.target.value);
@@ -16,16 +22,28 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormInput("");
-    handleShowModal();
+    setError(null); // Reset any previous error messages.
+
+    if (checkValidEmail(formInput)) {
+      setFormInput("");
+      handleShowModal();
+    } else {
+      setError(`Valid email is requierd!`); // Set an error message.
+    }
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
-      <p className="form-title">Email address:</p>
+    <form className="form-container" onSubmit={handleSubmit} noValidate>
+      <div className="form-title-container">
+        <p className="form-title">Email address:</p>
+        {
+          error && <p className="error-message">{error} </p> // Display the error message if there is an error.
+        }
+      </div>
+
       <input
         type="email"
-        className="register-email-input"
+        className={`register-email-input ${error ? "error" : ""}`} // Apply a class if there's an error.
         placeholder="email@company.com"
         value={formInput}
         onChange={handleChange}
