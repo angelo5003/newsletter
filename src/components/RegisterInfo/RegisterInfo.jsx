@@ -3,9 +3,9 @@ import Form from "../Form/Form";
 
 const RegisterInfo = () => {
   return (
-    <section>
+    <section className="register-outer-container">
       <div className="register-container">
-        <h2>Stay updated!</h2>
+        <h2 className="register-title">Stay updated!</h2>
         <p className="register-text">
           Join 60,000+ product managers receiving monthly updates on:
         </p>

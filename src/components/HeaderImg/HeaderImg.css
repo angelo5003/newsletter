@@ -1,7 +1,26 @@
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 23.75rem) {
+  .header-img-container {
+    display: flex;
+  }
+
+  .header-img {
+    background-image: url("/assets/images/illustration-sign-up-desktop.svg");
+    width: 25rem;
+    height: 37rem;
+    margin: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 23.43rem) {
   .header-img-container {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .header-img {
+    background-image: url("/assets/images/illustration-sign-up-mobile.svg");
+    width: 23.43rem;
+    height: 17.75rem;
   }
 }
